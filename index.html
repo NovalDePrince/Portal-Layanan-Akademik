@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Portal Layanan Akademik: ajukan surat aktif kuliah, transkrip sementara, cuti akademik, dan legalisir secara daring.">
+  <title>Portal Layanan Akademik – Universitas Pattimura</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#konten-utama">Lewati ke konten utama</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <svg class="logo" width="44" height="44" viewBox="0 0 44 44" aria-hidden="true" focusable="false">
+        <rect width="44" height="44" rx="10" fill="#ffd166"/>
+        <path d="M22 9 6 17l16 8 12-6v9h3V17L22 9Zm-9 14v6c0 2 4 5 9 5s9-3 9-5v-6l-9 4-9-4Z" fill="#0b3a73"/>
+      </svg>
+      <div>
+        <p class="site-name">Universitas Pattimura</p>
+        <h1>Portal Layanan Akademik</h1>
+      </div>
+    </div>
+  </header>
+
+  <nav class="site-nav" aria-label="Navigasi utama">
+    <ul class="wrap">
+      <li><a href="#beranda">Beranda</a></li>
+      <li><a href="#layanan">Layanan</a></li>
+      <li><a href="#permohonan">Ajukan permohonan</a></li>
+    </ul>
+  </nav>
+
+  <main id="konten-utama" tabindex="-1">
+    <section id="beranda" class="wrap intro" aria-labelledby="judul-beranda">
+      <h2 id="judul-beranda">Urus dokumen akademik tanpa antre di kampus</h2>
+      <p>Pilih layanan, isi formulir, dan pantau prosesnya. Permohonan yang lengkap diproses pada hari kerja, pukul 08.00–16.00 WIT.</p>
+      <p class="note">Mahasiswa aktif dapat mengajukan permohonan menggunakan NIM dan email kampus.</p>
+    </section>
+
+    <section id="layanan" class="wrap" aria-labelledby="judul-layanan">
+      <h2 id="judul-layanan">Layanan yang tersedia</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Surat Aktif Kuliah</h3>
+          <p>Bukti status kemahasiswaan untuk beasiswa, tunjangan, atau administrasi instansi.</p>
+          <p class="meta">Estimasi: 1 hari kerja</p>
+        </article>
+        <article class="card">
+          <h3>Transkrip Sementara</h3>
+          <p>Rekap nilai semester berjalan yang ditandatangani secara digital oleh program studi.</p>
+          <p class="meta">Estimasi: 2 hari kerja</p>
+        </article>
+        <article class="card">
+          <h3>Cuti Akademik</h3>
+          <p>Permohonan tidak mengikuti perkuliahan selama satu semester dengan persetujuan dosen wali.</p>
+          <p class="meta">Estimasi: 5 hari kerja</p>
+        </article>
+        <article class="card">
+          <h3>Legalisir Dokumen</h3>
+          <p>Pengesahan salinan ijazah dan transkrip untuk melamar kerja atau studi lanjut.</p>
+          <p class="meta">Estimasi: 3 hari kerja</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="permohonan" class="wrap" aria-labelledby="judul-form">
+      <h2 id="judul-form">Form permohonan layanan</h2>
+      <p>Semua kolom bertanda <span aria-hidden="true">*</span><span class="sr-only">bintang</span> wajib diisi.</p>
+
+      <form class="form" action="#sukses" method="get">
+        <fieldset>
+          <legend>Data pemohon</legend>
+
+          <div class="field">
+            <label for="nama">Nama lengkap <span aria-hidden="true">*</span></label>
+            <input type="text" id="nama" name="nama" required autocomplete="name" placeholder="Contoh: Siti Rahayu">
+          </div>
+
+          <div class="field">
+            <label for="nim">NIM <span aria-hidden="true">*</span></label>
+            <input type="text" id="nim" name="nim" required inputmode="numeric" pattern="[0-9]{8,12}" aria-describedby="nim-hint" placeholder="Contoh: 202412345">
+            <small id="nim-hint">8 sampai 12 digit angka.</small>
+          </div>
+
+          <div class="field">
+            <label for="email">Email <span aria-hidden="true">*</span></label>
+            <input type="email" id="email" name="email" required autocomplete="email" placeholder="nama@gmail.com">
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Detail layanan</legend>
+
+          <div class="field">
+            <label for="layanan-jenis">Jenis layanan <span aria-hidden="true">*</span></label>
+            <select id="layanan-jenis" name="layanan" required>
+              <option value="">Pilih jenis layanan</option>
+              <option value="surat-aktif">Surat Aktif Kuliah</option>
+              <option value="transkrip">Transkrip Sementara</option>
+              <option value="cuti">Cuti Akademik</option>
+              <option value="legalisir">Legalisir Dokumen</option>
+            </select>
+          </div>
+
+          <fieldset class="radios">
+            <legend>Cara menerima dokumen <span aria-hidden="true">*</span></legend>
+            <label class="choice"><input type="radio" name="penerimaan" value="digital" required checked> Unduh digital (PDF)</label>
+            <label class="choice"><input type="radio" name="penerimaan" value="cetak"> Ambil cetak di Bagian Akademik</label>
+          </fieldset>
+
+          <div class="field">
+            <label for="keperluan">Keperluan <span aria-hidden="true">*</span></label>
+            <textarea id="keperluan" name="keperluan" rows="5" required minlength="10" maxlength="500" aria-describedby="keperluan-hint" placeholder="Jelaskan untuk apa dokumen ini dibutuhkan"></textarea>
+            <small id="keperluan-hint">10 sampai 500 karakter.</small>
+          </div>
+
+          <div class="field">
+            <label class="choice"><input type="checkbox" name="setuju" required> Saya menyatakan data yang diisi benar. <span aria-hidden="true">*</span></label>
+          </div>
+        </fieldset>
+
+        <button type="submit" class="btn btn-primary">Kirim permohonan</button>
+      </form>
+
+      <div id="sukses" class="modal" role="dialog" aria-modal="true" aria-labelledby="judul-sukses" aria-describedby="isi-sukses">
+        <a class="modal-backdrop" href="#permohonan" aria-label="Tutup pesan" tabindex="-1"></a>
+        <div class="modal-box">
+          <svg class="check" width="56" height="56" viewBox="0 0 56 56" aria-hidden="true" focusable="false">
+            <circle cx="28" cy="28" r="28" fill="#1b7f4b"/>
+            <path d="m16 29 8 8 16-18" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <h3 id="judul-sukses">Permohonan terkirim</h3>
+          <p id="isi-sukses">Terima kasih. Permohonan Anda sudah tercatat dan akan diproses pada hari kerja. Notifikasi dikirim ke email yang Anda isi.</p>
+          <a class="btn btn-primary" href="#permohonan">Tutup</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Bagian Akademik, Gedung Rektorat Lantai 2, Universitas Pattimura</p>
+      <p>Email: <a href="mailto:akademik@Unpatti.ac.id">akademik@Unpatti.ac.id</a></p>
+      <p><small>&copy; 2026 Universitas Pattimura. Tugas Pertemuan 5.</small></p>
+    </div>
+  </footer>
+</body>
+</html>
