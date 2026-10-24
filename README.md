@@ -48,8 +48,3 @@ Pengujian dilakukan pada URL GitHub Pages dengan Chrome DevTools. Screenshot len
 | 5 | Network (Disable cache aktif, hard reload) | 2 request (document dan `styles.css`), keduanya berstatus 200. Tidak ada resource gagal. |
 | 6 | Keyboard | Kolom form menampilkan outline fokus yang jelas (cincin kuning). Fokus terlihat saat kolom Email aktif. |
 | 7 | Validasi form | Email tanpa `@` ditolak browser dengan pesan "Please include an '@' in the email address", jadi validasi HTML (`type="email"` dan `required`) berfungsi. |
-
-## Catatan debugging
-- **favicon.ico 404:** browser otomatis meminta `/favicon.ico` yang tidak ada. Diperbaiki dengan menambahkan `<link rel="icon" href="data:,">` di `<head>`, sehingga Console dan Network bersih.
-- **Perubahan di GitHub tidak langsung terlihat:** setelah label email diubah menjadi "Email Kampus", tab biasa masih menampilkan versi lama karena cache browser, sedangkan Incognito sudah menampilkan versi baru. Diatasi dengan hard reload (Ctrl+Shift+R) dan mengaktifkan Disable cache di DevTools. Status deployment dicek di tab Actions (pages build and deployment berstatus hijau).
-- **Temuan:** status 304 pada Network berarti file diambil dari cache, bukan error.
